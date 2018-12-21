@@ -12,7 +12,7 @@ Rasmus Groth
 
 | Command | meaning | example |
 | :--- | :--- | :--- |
-| man <command> | View the manual for given command| |
+| `man <command>` | View the manual for given command| |
 | `pwd` | Print work directory | |
 | `ls` | list files in current directory | |
 | `ls -a` | List all files, including hidden files | |
@@ -39,15 +39,14 @@ Rasmus Groth
 | `touch scriptname.sh` | create shell script scriptname.sh | |
 | `lsof -i tcp:8000` | List open files on tcp port 8000 | |
 | `kill -9 pid` | kills the process with the pid | |
-| `lsof -t -i tcp:8000 | xargs kill -9` | kill all processes on port 8000|
-| echo $USER | print the username to the console |
+| `lsof -t -i tcp:8000 \| xargs kill -9` | kill all processes on port 8000|
+| `echo $USER` | print the username to the console |
 
 #### CLI options
 | option | Effect     |
 | :--- | :--- |
 | `-r` | recursively |
 | `-m` | message |
-
 
 ## Customization
 
@@ -56,9 +55,6 @@ Change `~/.bash_profile`, `.profile` or `~/.zscrc` to set custom command aliases
 | alias | Resolves to | Description |
 | :--- | :--- | :-- |
 | `zshcf` | vim ~/.zshrc | Edit zsh profile settings|
-
-
-
 
 #### Permissions
 
@@ -73,10 +69,11 @@ rwx = Read Write Execute
 | 1 | 421 | 421 | 421 |
 
 ##### Examples
-```py
+```
 chmod 777 = read(4), write(2) and execute(1) right for owner(4), group(2) and user(1)
 chmod 777  = give owner, group and user read, write and execute rights
 chmod 444 = give owner, group and user read access
+chmod 400 = give owner read access and all others no rights
 ```
 
 ### Shell Scripting
