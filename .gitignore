@@ -1,5 +1,6 @@
 # secrets #
 ###########
+/secret/*
 *.pem
 
 # Python related apps and frameworks #
