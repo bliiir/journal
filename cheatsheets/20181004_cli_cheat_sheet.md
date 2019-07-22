@@ -28,10 +28,12 @@ Rasmus Groth
 | `cat filename` | print filename | |
 | `head filename` | print first x lines of filename | |
 | `tail filename` | print last x line of filename | |
+| `tail -f your.log` | Open a live version of the file your.log in the terminal |
 | `history > file1.txt` | replace contents of file1.txt with history | |
 | `history >> file1.txt` | append contents of file1.txt with history | |
 | `history \ grep "git" > file1.txt` | Find the word "git" in my history and replace the content of file1.txt with the result| |
 | `find . -name "file*"` | find files and folders with the characters "file" AS part of the name | |
+| `find / -name "postgresql.conf"` | find the file 'postgresql.conf' recursively from the root folder |
 | `cd -` | go back to the most recent dir you've been in | |
 | `chmod 124 filename.ext` | change permissions  - owner, user, guest| |
 | `which python3` | Shows you where the python command is located | |
@@ -41,9 +43,14 @@ Rasmus Groth
 | `kill -9 pid` | kills the process with the pid | |
 | `lsof -t -i tcp:8000 \| xargs kill -9` | kill all processes on port 8000|
 | `echo $USER` | print the username to the console |
-| `tail -f your.log` | Open a live version of the file your.log in the terminal |
 | `whoami` | Shows your user |
 | `sudo su` | Change to root user |
+| `ps aux` | report a snapshot of the current processes. a = show processes for all users, u = display the process's user/owner, x = also show processes not attached to a terminal |
+| `top` | Show all the running processes within your Linux environment |
+| `man <command>` | Shows a manual for `<command>` |
+| `defaults write com.apple.finder AppleShowAllFiles TRUE` | Shows hidden files in Finder |
+| `killall Finder` | Restarts the Mac Finder program |
+
 
 
 #### CLI options
