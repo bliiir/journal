@@ -71,6 +71,7 @@ try:
     if (y == 0):
         raise MyException(404, "exception raised")
     print(x/y)
+
 except MyException AS exc:
     print("error with status code: ", exc.status_code)
     print("with message: ", exc.message)
