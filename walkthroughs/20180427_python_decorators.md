@@ -66,7 +66,7 @@ def greet(name):
 # Define second function which takes a function as input
 def call_func(func):
     other_name = "Bruce"
-    return func(other_name)  
+    return func(other_name)
 
 # Call second function with first function as the argument. Notice the greet does not have () at the end
 print call_func(greet)
@@ -95,7 +95,7 @@ def compose_greet_func():
 greet = compose_greet_func()
 
 # Print the return of the greet variable that refers to the compose_greet_func
-print greet()
+print(greet())
 ```
 ```
 Hello Bruce
@@ -135,27 +135,29 @@ Hello Bruce
 #### Composition of Decorators
 Decorators are wrappers of existing functions that enable you to add to a functions
 ```python
-## 2. Insert the content of the variable first_name and last_name instead of the 0 and 1
-# in the curly brackets.
+## 2. fetch the get_text function without running it
 def get_text(first_name, last_name):
     return "Hi, {0} {1} - how are you?".format(first_name, last_name)
 
-# 3. Then take the result of get_text, passed as func...
+# 3. Pass it to the p_decorate funtion
 def p_decorate(func):
 
-    # 4. To ...
+    # 5.
     def func_wrapper(first_name, last_name):
 
-        # 5. return the content of the argument func wrapped in <p></p> tags
+        # 6. Return the content of the argument func wrapped in
+        # <p></p> tags
         return("<p>{0}</p>".format(func(first_name, last_name)))
 
-    # 3. And invoke the func_wrapper function...
+    # 4. Invoke the func_wrapper function (5+6) and return it
     return func_wrapper
 
-# 1. Call the p_decorate function with the get text function as the argument and store the object in my_get_text
+# 1. Call the p_decorate function with the get text function as the
+# argument and store the object in my_get_text
 my_get_text = p_decorate(get_text)
 
-# 6. Now invoke the my_get_text instance of the p_decorate with Bruce and Wayne as the arguments for the get function.
+# 6. Now invoke the my_get_text instance of the p_decorate with Bruce
+# and Wayne as the arguments for the get function.
 print(my_get_text("Bruce", "Wayne"))
 
 ```
@@ -238,3 +240,4 @@ There are more goodies in the links mentioned above.
 [1]: https://medium.freecodecamp.org/learning-python-from-zero-to-hero-120ea540b567
 [2]: https://medium.freecodecamp.org/python-collection-of-my-favorite-articles-8469b8455939
 [3]: https://www.thecodeship.com/patterns/guide-to-python-function-decorators/
+[4]: https://realpython.com/primer-on-python-decorators/
