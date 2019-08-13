@@ -1,14 +1,17 @@
-*Journal*  
-Rasmus Groth  
-*20190103, Utterslev, Copenhagen, Denmark*
+*Journal*
+Rasmus Groth
+*Created: 20190103, Utterslev, Copenhagen, Denmark*
+*Edited: 20190813, Utterslev, Copenhagen, Denmark*
 
 # Automated Realtime Algorithmic Cryptocurrency Trading
 ### Setting up concurrent and parallel excution of multiple python scripts
-I am setting up my crypto currency auto trading platform on aws using EC2 and RDS (postgres) and I need a simple, robust way of ensuring that I am executing my trades at appropriate times and on time.
+We are setting up a trading platform and we need a simple, robust way of ensuring that we are executing trades at appropriate times and on time.
 
 ---
 
 ## Initial considerations
+The most critical thing is to be able to post orders concurrently on the exchange.
+
 
 ### Criteria
 - Less = more
@@ -25,10 +28,10 @@ I am setting up my crypto currency auto trading platform on aws using EC2 and RD
 
 | Subject | Description | Solutions |
 | :-- | :-- | :-- |
-| **Process control** | Ensures everything is running even if system has crashed | [supervisord](http://supervisord.org/), [deamontools](http://cr.yp.to/daemontools.html) |
+| **Process control** | Ensures everything is running even if system has crashed | [supervisord](http://supervisord.org/), [deamontools](http://cr.yp.to/daemontools.html) [crontab](https://www.geeksforgeeks.org/crontab-in-linux-with-examples/)|
 | **Message/job Queue** | Ensures tasks are distributed and the main python process freed | [rabbitmq](https://www.rabbitmq.com/), [redis](https://redis.io/) |
 | **Scheduling** | Ensures tasks are executed at appropriate times and intervals | [celery](http://www.celeryproject.org/), [sched](https://docs.python.org/3.4/library/sched.html), [schedule](https://schedule.readthedocs.io/en/stable/) |
-| **Concurrency** | Ensures tasks are executed in parallel. | [asyncio](https://docs.python.org/3/library/asyncio.html), [threading](https://docs.python.org/3/library/threading.html)|
+| **Concurrency** | Ensures tasks are executed in parallel. | [asyncio](https://docs.python.org/3/library/asyncio.html), [threading](https://docs.python.org/3/library/threading.html), [concurrency](https://docs.python.org/3/library/concurrent.futures.html)|
 | **Tasks** | The work to be scheduled | Python script(s)
 
 ---
@@ -83,7 +86,7 @@ This will do for now. It works well enough for a one-man-army, but probably less
 | **Process control** | [Supervisord](http://supervisord.org/)|
 | **Work queue** | [redis](https://redis.io/)|
 | **Scheduling** | [Celery](http://www.celeryproject.org/) |
-| **Concurrency** | Taken care of by Celery and redis |
+| **Concurrency** | [Asyncio](https://docs.python.org/3/library/asyncio.html) |
 
 
 ---
@@ -107,3 +110,6 @@ This will do for now. It works well enough for a one-man-army, but probably less
 - [Asynchronous Tasks in Python - Getting Started With Celery](https://www.youtube.com/watch?v=fg-JfZBetpM)
 - [Django + Celery + Supervisord + Redis error when setting](https://stackoverflow.com/questions/45904309/django-celery-supervisord-redis-error-when-setting)
 - [Multiprocessing vs multithreading vs asyncio in Python 3.4](https://stackoverflow.com/questions/27435284/multiprocessing-vs-multithreading-vs-asyncio-in-python-3-4)
+- [Asynchronous-programming](https://luminousmen.com/post/asynchronous-programming-blocking-and-non-blocking)
+- [Real Python: Parallel Processing](https://www.youtube.com/watch?v=0NNV8FDuck8&list=PLP8GkvaIxJP1z5bu4NX_bFrEInBkAgTMr&index=6)
+- [Async Python: The Different Forms of Concurrency](http://masnun.rocks/2016/10/06/async-python-the-different-forms-of-concurrency/)
