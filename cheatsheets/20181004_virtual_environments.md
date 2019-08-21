@@ -36,19 +36,16 @@ virtualenvwrapper is an installed package
 
 | Command | Effect |
 | :-- | :-- |
-| pip install virtualenvwrapper | Install virtualenvwrapper |
-| source /usr/local/bin/virtualenvwrapper.sh | Add it to your PATH (`~/.profile` for example) |
-| mkvirtualenv env1 | Make a virtual environement called env1 |
-| workon env1 | Activate virtual environment |
-| workon | List all virtual environments |
-| rmvirtualenv env1 | delete virtual environment env1 |
-
-
-
+| `pip install virtualenvwrapper` | Install virtualenvwrapper |
+| `source /usr/local/bin/virtualenvwrapper.sh` | Add it to your PATH (`~/.profile` for example) |
+| `mkvirtualenv env1` | Make a virtual environement called env1 |
+| `workon env1` | Activate virtual environment |
+| `workon` | List all virtual environments |
+| `rmvirtualenv env1` | delete virtual environment env1 |
 
 
 ## pyenv
-
+Not covered yet
 
 
 
