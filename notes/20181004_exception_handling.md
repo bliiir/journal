@@ -1,3 +1,8 @@
+*Cheatsheet*
+Rasmus Groth
+*Started: 20190123, Utterslev, Copenhagen, Denmark*
+*Edited: 20190821, Utterslev, Copenhagen, Denmark*
+
 # Exception handling
 
 | Command | Description |
