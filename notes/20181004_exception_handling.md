@@ -2,15 +2,18 @@
 
 | Command | Description |
 | :-- | :-- |
-| `try: \n\t statement` | try to execute the statement |
-| `except: \n\t statement` | If there is an exception, execute statment |
-| `except ZeroDivisionError AS zde: \n\t statement` | If there is a zero division error, execute statement |
-| `else: \n\t statement` | Do this if there are no exceptions |
+| `try: <statement>` | try to execute the statement |
+| `except: <statement>` | If there is an exception, execute statment |
+| `except ZeroDivisionError AS zde: <statement>` | If there is a zero division error, execute statement |
+| `else: <statement>` | Do this if there are no exceptions |
 | `finally: \n\t statement` | Do this in all cases |
-| `assert (statement), "message"` | Throws a custom statement when an exception happens |
+| `assert (<statement>), "message"` | Throws a custom statement when an exception happens |
 | `raise Exceptionclass("message")` | Raises an error of Exceptionclass with a message |
 
 
+## Examples
+
+### Try, except, else, finally
 ```py
 # Try this
 try:
@@ -32,6 +35,7 @@ else:
 finally:
     print("Done")
 ```
+Output
 ```
 Cannot access that element
 Done
@@ -39,7 +43,7 @@ Done
 
 ```py
 try:
-    if(10 > 0):
+    if(10 < 0):
         my_exception = Exception("We are raising this exception")
         raise Exception
 
@@ -52,9 +56,12 @@ There was an error We are raising this exception
 
 ### Custom exception handling
 ```py
+def load_page(url):
+    pass
+
 class MyException(Exception):
 
-    status_codes = {404: "not found", 500: "server error"}
+    status_codes = {404: "page not found", 500: "server error"}
 
     def __init__(self, status_code, message):
         self.status_code = status_code
@@ -64,17 +71,23 @@ class MyException(Exception):
     def __str__(self):
         return "This is a new way to return the exception AS a string"
 
-x = 10
-y = 0
+
+url = 'our_site/page_that_does_not_exist.html'
 
 try:
-    if (y == 0):
+    if (url != 'our_site/page_that_does_exist.html'):
         raise MyException(404, "exception raised")
-    print(x/y)
+    page = load_page(url)
 
-except MyException AS exc:
+except MyException as exc:
     print("error with status code: ", exc.status_code)
     print("with message: ", exc.message)
     print(exc.status_message)
 
+```
+Output
+```
+error with status code:  404
+with message:  exception raised
+page not found
 ```
