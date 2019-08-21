@@ -1,6 +1,7 @@
-*Journal*
-Rasmus Groth
-*20181004, Betahaus, Gracia, Barcelona, Spain*
+*Cheatsheet*
+*Rasmus Groth*
+*Started: 20181004, Betahaus, Gracia, Barcelona, Spain*
+*Edited: 20190821, Utterslev, Copenhagen, Denmark*
 
 # Command Line
 
