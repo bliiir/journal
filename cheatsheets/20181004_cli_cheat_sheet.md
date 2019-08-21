@@ -1,5 +1,5 @@
-*Journal*  
-Rasmus Groth  
+*Journal*
+Rasmus Groth
 *20181004, Betahaus, Gracia, Barcelona, Spain*
 
 # Command Line
@@ -50,7 +50,34 @@ Rasmus Groth
 | `man <command>` | Shows a manual for `<command>` |
 | `defaults write com.apple.finder AppleShowAllFiles TRUE` | Shows hidden files in Finder |
 | `killall Finder` | Restarts the Mac Finder program |
+| `reboot` | Reboot computer |
 
+
+### Background tasks
+|Commmand|Description|
+|:--|:--|
+| `python3 script.py &` | Run python script in the background |
+| `nohup python3 script.py &`| Run python script in the background and detach from session |
+
+
+### Postgres
+|Commmand|Description|
+|:--|:--|
+| `sudo service postgresql stop` | Stop postgres database |
+| `sudo service postgresql start` | Star postgres database |
+
+
+
+### Networking
+| Command | Description |
+| :--- | :--- |
+| `curl ifconfig.me` | Get own ip number |
+| `curl https://freegeoip.app/xml/143.204.247.98` | Get the geolocation of an ip number using the [freegeoip](https://freegeoip.app/) service |
+| `curl https://freegeoip.app/xml/bitmex.com` | Get the geolocation of an ip number |
+| `dig 143.204.247.98` | DNS lookup utility |
+| `dig bitmex.com` | DNS lookup utility |
+| `traceroute 143.204.247.98` | print the route packets take to network host |
+| `traceroute bitmex.com` | print the route packets take to network host |
 
 
 #### CLI options
