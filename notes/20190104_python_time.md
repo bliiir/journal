@@ -1,9 +1,22 @@
 *Journal*
 Rasmus Groth
-*20190104, Utterslev, Copenhagen, Denmark*
+*Started: 20190104, Utterslev, Copenhagen, Denmark*
+*Edited: 20190829, Utterslev, Copenhagen, Denmark*
 
-# Time in Python (sucks)
-But the [datetime module](https://docs.python.org/3/library/datetime.html) makes it easier by handling dates and time in an object that can then be returned in different formats
+### Summary
+
+| assignment | value example|
+| :--- | :--- |
+| `t = datetime.datetime.utcnow()` | `datetime.datetime(2019, 1, 4, 13, 49, 28, 701252)`|
+| `tu = t.timestamp()` | `1546606168.701252` |
+| `t.date()` | `datetime.date(2019, 1, 4)`
+| `datetime.datetime.utcfromtimestamp(tu)` | `datetime.datetime(2019, 1, 4, 12, 49, 28, 701252)` |
+| `t.strftime("%Y.%M.%d %H:%M:%S")` | `'2019.49.04 13:49:28'`
+
+---
+
+# Time in Python
+Keeping record of time and working with time can be a challenge because of issues stemming from meat-space, but the [datetime module](https://docs.python.org/3/library/datetime.html) makes it easier by handling dates and time in an object that can then be returned in different formats
 
 ## Datetime
 An object with attributes and methods
