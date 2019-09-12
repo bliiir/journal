@@ -9,3 +9,4 @@
 | [`globals()`](https://docs.python.org/3.7/library/functions.html#globals) | Return a dictionary representing the current global symbol table |
 | [`locals()`](https://docs.python.org/3.7/library/functions.html#locals) | Update and return a dictionary representing the current local symbol table |
 | [`inspect.currentframe()`](https://docs.python.org/3/library/inspect.html#inspect.currentframe) | Return the frame object for the caller’s stack frame. |
+| `object.keys` | Get the keys of a dictionary object |
