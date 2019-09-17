@@ -33,6 +33,23 @@
 | `assertWarnsRegex(warn, r, fun, *args, **kwds)` |	fun(*args, **kwds) raises warn and the message matches regex r |
 | `assertLogs(logger, level)` |	The with block logs on logger with minimum level |
 
+# Run unittests
+
+### All
+```py
+python3 -m unittest discover .
+```
+
+### Single
+
+```py
+python test.py
+```
+
+#### Verbose
+```py
+python test.py -v
+```
 
 
 ---
