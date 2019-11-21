@@ -1,1 +1,10 @@
-test -e /srv/data/interactions/inBio_Map_core_2017_07_07.json && echo file found
+Coding Journal
+
+Author: Rasmus Groth 
+
+Started: 20191121, Intomics, Lyngby, Copenhagen, Denmark 
+Edited: 20191121, Intomics, Lyngby, Copenhagen, Denmark 
+
+```bash
+test -e <filepath/filename> && echo file found || echo file not found
+```
