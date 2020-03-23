@@ -1,5 +1,5 @@
-[Rasmus Groth](https://github.com/bliiir)  
-Started: 20190625, Utterslev, Copenhagen, Denmark  
+[Rasmus Groth](https://github.com/bliiir)
+Started: 20190625, Utterslev, Copenhagen, Denmark
 Last entry: 20190625, Utterslev, Copenhagen,Denmark
 
 # Visual studio code
@@ -15,3 +15,5 @@ Last entry: 20190625, Utterslev, Copenhagen,Denmark
 | `ctrl+space` | Activate Intellisense |
 | `alt+cmd+[` | Fold code |
 | `alt+cmd+]` | Unfold code |
+| `cmd+F2` | Select all occurences |
+| `cmd+alt+/` | Wrap selection in """<selection>"""
