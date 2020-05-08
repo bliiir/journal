@@ -1,6 +1,6 @@
 * [Installing Python 3 on Mac OS X](https://docs.python-guide.org/starting/install3/osx/#install3-osx)
 * [Use Python Effectively on OS X](http://blog.manbolo.com/2014/09/27/use-python-effectively-on-os-x)
-
+* [MacOS Setup Guide](http://sourabhbajaj.com/mac-setup/)
 
 ```sh
 # Install homebrew
